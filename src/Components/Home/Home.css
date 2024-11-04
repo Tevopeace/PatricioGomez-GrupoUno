@@ -1,0 +1,98 @@
+/*Banner imagen en el home*/
+.banner {
+    height: 1000px; /*Altura del banner*/
+    width: 100vw; /*Ancho*/
+    position: relative; /* Para que el contenido se posicione relativo al banner*/
+    overflow: hidden; /* ocultar cualquier parte del contenido que sobresalga*/
+}
+
+.banner-image {
+    width: 100%; /*ancho*/
+    height: 90%; /*altura*/
+    object-fit: cover; /*Asegura que la imagen cubra el área sin distorsionarse*/
+    position: absolute; /*Permite que la imagen se coloque detrás del contenido*/
+    top: 0; /*Alinea la imagen en la parte superior */
+    z-index: 4; /*Asegura que la imagen esté detrás del contenido*/
+}
+
+.banner-container {
+    max-width: 1170px; /*Ancho máximo*/
+    margin: 0 auto; /*Centra el contenedor horizontalmente*/
+    position: absolute; /*superponer el contenido sobre la imagen*/
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    z-index: 5; /
+}
+
+.banner-title {
+    color: #6e18a7; 
+    font-weight: bold; 
+    font-size: 60px; /* Tamaño de la fuente */
+    line-height: 80px; /* Altura de para el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    margin: 0; 
+    position: relative; /*efecto de sombra */
+    z-index: 6; /* Asegura que el texto esté por encima del fondo */
+    text-shadow: 0 0 5px rgb(49, 162, 206), /* Sombra de efecto neón */
+                 0 0 10px rgb(39, 140, 199),
+                 0 0 15px rgb(37, 161, 192);
+}
+
+.banner-title:hover {
+    text-shadow: 0 0 10px rgb(217, 176, 255), /* Aumenta el efecto al pasar el mouse */
+                 0 0 20px rgb(191, 123, 255, 0.781),
+                 0 0 30px rgb(100, 61, 136);
+}
+/*Boton "Ver catalogo"*/
+.shop-button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em; /* Ajusta el padding */
+    color: var(--glow-color);
+    font-size: 17px; /* Cambia el tamaño de la fuente */
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 1em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    display: inline-block; /
+}
+
+.shop-button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow -spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.shop-button:hover {
+    color: var(--btn-color );
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 2em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+}
+
+.shop-button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+                0 0 2.5em 2em var(--glow-spread-color),
+                inset 0 0 .5em .25em var(--glow-color);
+}
