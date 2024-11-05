@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
-import './home.css'; 
+import './Home.css'; 
 
 export default function Home() {
     return (

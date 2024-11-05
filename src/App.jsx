@@ -1,12 +1,11 @@
-import './components/Body/BodyBackground.css';
 import './App.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/Home/Home.jsx';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
-import Products from './components/Products/Products';
+import Header from './Components/Header/Header.jsx';
+import Footer from './Components/Footer/Footer.jsx';
+import Home from './Components/Home/Home.jsx';
+import About from './Components/About/About.jsx';
+import Contact from './Components/Contact/Contact.jsx';
+import Products from './Components/Products/Products.jsx';
 import ItemDetail from './Components/ItemDetail/ItemDetail.jsx'
 import ProductsCategory from './Components/ProductsCategory/Category.jsx';
 
