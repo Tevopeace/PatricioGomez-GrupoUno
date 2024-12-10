@@ -1,0 +1,24 @@
+.item-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 20px; 
+    position: relative; 
+    z-index: 1; 
+}
+
+.item-list .item {
+    flex: 1 1 200px; 
+    margin: 10px; 
+    background-color: #7e2929; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    transition: transform 0.2s; 
+    position: relative; 
+    z-index: 2; 
+}
+
+.item-list .item:hover {
+    transform: scale(1.05); 
+    z-index: 5; 
+}
