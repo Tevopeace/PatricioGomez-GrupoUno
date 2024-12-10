@@ -1,0 +1,21 @@
+.button {
+    background-color: #6e18a7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 100px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 5px;
+}
+
+.product-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.button:hover {
+    background-color: #5a0f8c;
+}
